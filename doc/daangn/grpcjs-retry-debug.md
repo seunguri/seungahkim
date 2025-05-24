@@ -7,7 +7,7 @@ gRPC 기반 서비스에 재시도 정책을 도입한 이후, 예상치 못한 
 
 #### 사용 기술
 
-- Node.js, gRPC.js (`@grpc/grpc-js` v1.11.1)
+- Node.js, gRPC.js (`@grpc/grpc-js` v1.8.0 이상)
 - Envoy
 - p-retry 라이브러리
 - GitHub Issues, 사내 위키

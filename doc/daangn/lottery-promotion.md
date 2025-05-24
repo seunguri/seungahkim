@@ -19,74 +19,9 @@
 - 프로모션 페이지 최초 진입 시 기본 행운 주사위 1개 자동 지급
 - 사용자가 공유한 초대 링크를 친구가 열람하면, 초대자와 친구 모두에게 각각 1개씩 추가 지급
 - 보유한 복권 개수 표시, 중복 지급 방지, 지급 조건 검증 필요
-- 24일(240708~240731)간 128401명 당첨 예정
+- 24일(240708~240731)간 128401명 당첨 예정 - *공개된 정보입니다.*
 
 ## 문제 해결
-
-```mermaid
-flowchart LR
-  %% Client
-  subgraph CLIENT [Client]
-    A[프로모션 페이지 접속]
-    A2[조회 API 요청: 내 보유 주사위 몇 개인지]
-  end
-
-  %% Frontend 이벤트 수집
-  subgraph FRONTEND [Frontend 이벤트 수집]
-    B[프로모션 정보를 담은 이벤트 발행]
-  end
-
-  %% Agenda 처리기
-  subgraph AGENDA [Node.js Agenda]
-    C[프로모션 이벤트 처리기 실행]
-    D[Kafka로 프로모션 이벤트 토픽 발행]
-  end
-
-  %% Kafka 소비자
-  subgraph KAFKA [Kafka Consumer]
-    E[EventRegister에서 프로모션 조건에 따른 유효성 검사 및 알림 발송]
-    M[DB에 지급 이벤트 등록]
-  end
-
-  %% 지급 처리 시스템
-  subgraph BACKEND [Backend 지급 처리]
-    F[MongoDB - 지급 이력 확인 및 저장]
-    G[Redis - 보유 개수 캐싱]
-    H[drawInviteEventLot - 리워드 서비스 요청]
-    I[Fallback - Redis에도 없고 MongoDB에도 없으면 1개 있다고 응답]
-  end
-
-  %% 리워드 서비스
-  subgraph REWARD [리워드 서비스]
-    J[리워드 서비스 처리]
-    K[알림 서비스 - 지급 알림 요청]
-    L[쿠폰함 - 기프티콘 등록]
-  end
-
-  %% 클라이언트 조회 흐름
-  A --> A2
-  A2 --> G
-  G -->|캐시에 있음| A
-  G -->|캐시에 없음| F
-  F -->|지급 이력 없음| I
-  I --> A
-
-  %% 지급 이벤트 흐름
-  A --> B
-  B --> C
-  C --> D
-  D --> E
-  E --> F
-  E --> G
-  E --> M
-  E --> H
-  H --> J
-  J --> K
-  J --> L
-  K --> A
-  L --> A
-
-```
 
 1. 최초 자동 지급 처리
 
@@ -101,11 +36,9 @@ flowchart LR
 - Agenda.js 기반 스케줄러로 이벤트 큐 처리
 
 3. 리워드 당첨 처리
-
 4. 장애 대응 로직 적용
 
 - Redis 캐시에 보유 개수가 없을 경우 임시 1개 지급된 것처럼 응답 처리
-
 - 지급-조회 간 타이밍 이슈에 따른 일관성 문제 해소
 
 ## 성과
