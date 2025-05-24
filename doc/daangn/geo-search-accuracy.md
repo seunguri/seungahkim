@@ -2,7 +2,7 @@
 
 ## 개요
 
-<div style="display: flex; align-items: flex-start; gap: 10px;">
+<div style="display: flex; align-items: flex-start; gap: 5px;">
   <div style="flex: 2;">
     <img src="image/geo-search-accuracy/1748103114939.png" alt="테스트 데이터" width="250" >
     <p style="text-align: left; font-size: 0.95em; color: #666;">GeoJSON 기반 거리 필터링 예시</p>
@@ -15,7 +15,7 @@
   </div>
 </div>
 
-## 사용기술 및 도구
+#### 사용기술 및 도구
 
 - Node.js
 - GeoJson - circle-to-polygon 라이브러리
