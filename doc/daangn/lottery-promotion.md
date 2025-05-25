@@ -4,8 +4,10 @@
 
 <div style="display: flex; align-items: flex-start; gap: 5px;">
   <div style="flex: 2;">
-    <img src="image/lottery-promotion/1748115423278.png" alt="행운주사위" width="250" >
-    <p style="text-align: left; font-size: 0.95em; color: #666;">2024년 여름 프로모션 홍보 이미지</p>
+    <img src="image/lottery-promotion/dice.png" alt="행운주사위" width="250" >
+    <p style="font-size: 0.9em; color: #888; margin-top: 0;">
+출처: <a href="https://www.daangn.com/kr/business-post/%EB%8B%B9%EA%B7%BC%EC%95%8C%EB%B0%94x%EC%98%A4%ED%95%B4%EC%9B%90-%EC%97%AC%EB%A6%84%ED%9C%B4%EA%B0%80-%ED%8C%A8%ED%82%A4%EC%A7%80%EB%B6%80%ED%84%B0-%EC%BA%90%EC%8B%9C-%EB%B3%B4%EC%83%81%EA%B9%8C%EC%A7%80-%EC%82%AC%EC%9E%A5%EB%8B%98%EB%8F%84-%EC%9E%98-%EB%B2%8C%EC%97%88%EC%8A%B5%EB%8B%88%EB%8B%A4-8t65mfn2yob1/?in=%EC%84%9C%EC%B4%88%EB%8F%99-6128" target="_blank" style="color: #888; text-decoration: underline;">[당근 공식 사이트] (당근사장님학교 글, 2024)</a>
+</p>
   </div>
   <div style="flex: 3;">
     <p style="text-align: left;">
@@ -53,4 +55,4 @@
 
 ## 참고 자료
 
-- [2024년 여름 프로모션 페이지](https://daangn-jobs-campaign-2024-summer.karrotwebview.com/applicant?af_xp=custom&source_caller=ui&pid=brand_user&is_retargeting=true&shortlink=bvzgpdpt&af_adset=jobs&af_ad=summer_240704_inapp&deep_link_value=karrot%3A%2F%2Fminikarrot%2Frouter%3Fremote%3Dhttps%253A%252F%252Fdaangn-jobs-campaign-2024-summer.karrotwebview.com%252Fapplicant%26navbar%3Dtrue%26scrollable%3Dtrue&c=inapp_contents)
+- [당근알바 2024년 여름 프로모션 페이지 (이벤트 종료)](https://daangn-jobs-campaign-2024-summer.karrotwebview.com/applicant?af_xp=custom&source_caller=ui&pid=brand_user&is_retargeting=true&shortlink=bvzgpdpt&af_adset=jobs&af_ad=summer_240704_inapp&deep_link_value=karrot%3A%2F%2Fminikarrot%2Frouter%3Fremote%3Dhttps%253A%252F%252Fdaangn-jobs-campaign-2024-summer.karrotwebview.com%252Fapplicant%26navbar%3Dtrue%26scrollable%3Dtrue&c=inapp_contents)

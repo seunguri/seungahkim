@@ -2,6 +2,11 @@
 
 ## 개요
 
+<img src="image/batch-optimization/flow.png" alt="테스트 데이터" width="350" >
+<p style="font-size: 0.9em; color: #888; margin-top: 0;">
+출처: 좌측 이미지 <a href="https://cs.kr.karrotmarket.com/wv/faqs/2151" target="_blank" style="color: #888; text-decoration: underline;">[당근마켓] (고객센터, 2025)</a>
+</p>
+
 사용자 최근 방문 시간을 기준으로 알림을 비활성화하는 배치 작업이 점점 느려져, 서비스 운영에 부담을 주고 있었습니다. 매일 수십만 건에 대 1+2N번 쿼리하는 병목을 해결하기 위해, **배치 일시를 추가하고 쿼리를 최적화를** 주도해 **150분에서 20초로** 단축시켰습니다.
 
 #### 사용 기술

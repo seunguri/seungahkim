@@ -4,12 +4,12 @@
 
 <div style="display: flex; align-items: flex-start; gap: 5px;">
   <div style="flex: 2;">
-    <img src="image/geo-search-accuracy/walking.png" alt="테스트 데이터" width="250" >
-    <a href="https://www.daangn.com/kr/jobs/about/?in=%EC%84%9C%EC%B4%88%EB%8F%99-6128" style="text-align: left; font-size: 0.95em; color: #666;">당근알바 소개 페이지</a>
+    <img src="image/geo-search-accuracy/walking-10minutes.jpeg" alt="테스트 데이터" width="250" >
+    <p style="font-size: 0.9em; color: #888; margin-top: 0;"> 출처: [당근마켓] (앱 내 화면 캡쳐, 2025)</p>
   </div>
   <div style="flex: 3;">
     <p style="text-align: left;">
-      당근 알바 플랫폼에서 우리 동네 사용자의 현재 위치 좌표를 기준으로 반경 내 게시글을 정확하게 조회할 수 있도록 검색 로직을 개선했습니다.<br>
+      당근 알바 플랫폼에서 사용자와 가까운 거리의 게시글을 정확하게 조회할 수 있도록 검색 쿼리를 개선했습니다.<br>
       개선 전후 주요 사용자 지표(노출 수, 클릭률, 지원률 등)를 정량적으로 분석하여 서비스 품질을 향상시킨 프로젝트입니다.
     </p>
   </div>
@@ -18,7 +18,7 @@
 #### 사용기술
 
 - Node.js
-- GeoJson - circle-to-polygon 라이브러리
+- GeoJson - [circle-to-polygon](https://www.npmjs.com/package/circle-to-polygon) 라이브러리
 - BigQuery, Superset 지표 모니터링
 
 ## 문제 상황
@@ -54,7 +54,7 @@
 
 2. 사용자 중심 좌표와 반경을 기반으로 GeoJSON `Polygon` 객체 생성
 
-   [circle-to-polygon](https://www.npmjs.com/package/circle-to-polygon) 라이브러리 도입 배경
+   `circle-to-polygon` 라이브러리 도입 배경
    GeoJSON은 원형(`Circle`) 영역을 직접 지원하지 않기 때문에, 반경 기반 검색을 구현하려면 원을 근사한 다각형(`Polygon`)이 필요합니다. 직접 위경도 기반 좌표 계산을 구현하는 방식은 정확도 관리와 유지보수 측면에서 비효율적이라 판단하였고, 다음과 같은 이유로 `circle-to-polygon` 라이브러리를 도입하였습니다:
 
    - 중심 좌표와 반경(m)을 입력하면 GeoJSON `Polygon` 객체 생성

@@ -2,8 +2,8 @@
 
 <div style="display: flex; align-items: flex-start; gap: 5px;">
   <div style="flex: 2;">
-    <img src="image/role-based-banner/banner_example.jpeg" alt="배너 예시" width="250" >
-    <p style="text-align: left; font-size: 0.95em; color: #666;">실제 마케팅 배너 예시</p>
+    <img src="image/role-based-banner/banner_flow.png" alt="배너 예시" width="250" >
+    <p style="font-size: 0.9em; color: #888; margin-top: 0;"> 출처: [당근마켓] (앱 내 화면 캡처 , 2025)</p>
   </div>
   <div style="flex: 3;">
     <p style="text-align: left;">
